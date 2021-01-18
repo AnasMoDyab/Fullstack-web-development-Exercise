@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
@@ -36,7 +36,10 @@
                                 class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                   <!--  <a data-toggle="modal" data-target="#loginModal">
+                        <span class="fa fa-sign-in"></span>Login
+                    </a> -->
+                    <a  id="login" role="button">
                         <span class="fa fa-sign-in"></span>Login
                     </a>
                 </span>
@@ -100,7 +103,10 @@
                     <!-- <a href="#ReserveTable" class="btn btn-warning nav-link btn-sm btn-block " data-toggle="tooltip" data-html="true" 
                         title="Or Call us at <br><strong>+852 123345678</strong>" data-placement="bottom" role="button"> 
                         <strong>Reserve table</strong></a>  -->
-                        <a href="#ReserveTable" data-toggle="modal"  class="btn btn-warning nav-link btn-sm btn-block "
+                        <!-- <a href="#ReserveTable" data-toggle="modal"  class="btn btn-warning nav-link btn-sm btn-block "
+                        role="button"> 
+                        <strong>Reserve table</strong></a> -->
+                        <a href="#ReserveTable"  id="ReserveTableButton" class="btn btn-warning nav-link btn-sm btn-block "
                         role="button"> 
                         <strong>Reserve table</strong></a>
 
@@ -467,10 +473,16 @@
                 
             });
 
-          /*   $('#carousel-play').click(function(){
-                $('#mycarousel').carousel('cycle');
-            }); */
+            $('#login').click(function(){
+                $('#loginModal').modal('show');
+                });
 
+            $('#ReserveTableButton').click(function(){
+                $('#ReserveTable').modal('show');
+                });
+            
+
+     
         })
     </script>
 </body>
